@@ -1,4 +1,4 @@
-﻿<Window x:Class="ClickerGame.MainWindow"
+﻿<Window x:Class="TelegramGame.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Clicker Game" Height="450" Width="800">
@@ -15,10 +15,15 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TextBlock x:Name="TitleText" Text="Clicker Game" FontSize="30" HorizontalAlignment="Center" Margin="0,10,0,0"/>
         <TextBlock x:Name="ScoreText" Text="Score: 0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0"/>
-        <Button x:Name="ClickButton" Content="Click Me!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ClickButton_Click"/>
-        <Button x:Name="UpgradeButton" Content="Upgrade" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50" Click="UpgradeButton_Click"/>
-        <TextBlock x:Name="UpgradeCostText" Text="Upgrade Cost: 10" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+        <Button x:Name="ClickButton" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ClickButton_Click" Height="128" Width="128">
+            <Button.BorderBrush>
+                <ImageBrush ImageSource="/Resources/banana.png"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/banana.png"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>
